@@ -1,0 +1,41 @@
+.\gradlew -q javaToolchains
+
+
+flutter build apk --release
+
+This will generate the APK at:
+build/app/outputs/flutter-apk/app-release.apk
+
+
+
+setting path before building apk
+flutter config --jdk-dir C:\Program Files\Eclipse Adoptium\jdk17
+
+
+update gradle.properties
+C:\Program Files\Eclipse Adoptium\jdk17\bin
+C:\Python\image_morpher\assets\fonts
+
+
+
+
+lib/
+├── main.dart                   ✅ Entry point
+├── screens/
+│   └── home_screen.dart        ✅ UI widget only
+├── widgets/
+│   └── upload_foreground.dart
+│   └── upload_background.dart
+│   └── input_text.dart
+│   └── morph_image.dart
+├── services/
+│   └── image_processor.dart    ✅ Logic for blending, text overlay, background removal
+├── controllers/
+│   └── home_controller.dart    ✅ Handles all state & function calls
+├── assets/
+│   └── fonts/                  ✅ Custom Roboto Font
+│       └── Roboto-Regular.ttf      
+│   └── images                  ✅ Images needed for User Preference Theme
+│       └── BarbieBuild.png     ✅ Barbie Button
+│       └── MapMe.png           ✅ Map icon
+│       └── TravelBuild.png     ✅ Travel Button
